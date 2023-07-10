@@ -1,0 +1,42 @@
+<div class="login-container">
+  <div class="lottie-animation mt-10">
+    <ng-lottie [options]="options" (animationCreated)="onAnimate($event)">
+    </ng-lottie>
+  </div>
+  <div class="logo">Ripe Tomatoes</div>
+  <div class="desc">
+    Welcome to Ripe Tomatoes, your go-to destination for insightful and
+    flavorful movie reviews! Just like the name suggests, our dedicated team of
+    critics is here to serve you with reviews that are ripe and bursting with
+    honest opinions, providing you with a delectable blend of analysis and
+    entertainment. Whether you're a cinephile seeking the latest blockbuster or
+    an indie enthusiast in search of hidden gems, Ripe Tomatoes promises to
+    deliver a tantalizing array of reviews that will guide you through the vast
+    cinematic landscape. So sit back, grab some popcorn, and let us whet your
+    appetite for all things film!
+  </div>
+  <div class="login-form">
+    <div class="login form-group">
+      <label for="uname">Username</label>
+      <input
+        type="text"
+        name="uname"
+        class="form-control"
+        [(ngModel)]="username"
+      />
+    </div>
+    <div class="login form-group">
+      <label for="pword">Password</label>
+      <input
+        type="password"
+        name="pword"
+        class="form-control"
+        [(ngModel)]="password"
+      />
+    </div>
+    <div class="btn-container">
+      <div class="error">{{ errorMsg }}</div>
+      <button class="btn btn-dark" (click)="login()">Login</button>
+    </div>
+  </div>
+</div>
